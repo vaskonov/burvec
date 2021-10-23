@@ -82,7 +82,7 @@ def score(test_f, model_f, vocab=[]):
                     if key not in we.index_to_key or value not in we.index_to_key:
                         continue
                 
-                scores[(key, value)] = (we[key], we[value], 0)
+                scores[(key, value)] = (we[key], we[value], -1)
     return scores
     
 def loss(scores):
@@ -91,9 +91,17 @@ def loss(scores):
     y = [i[1] for i in scores.values()]
     target = [i[2] for i in scores.values()]
     
-    return cos_loss(torch.tensor(x, dtype=torch.float64),
+    try:
+        _loss = cos_loss(torch.tensor(x, dtype=torch.float64),
                     torch.tensor(y, dtype=torch.float64), 
                     torch.tensor(target))
+    except:
+        print(scores)
+        print(x)
+        print(y)
+        print(target)
+    
+    return _loss
 
     
 def get_vocab(wes_fs):
@@ -102,7 +110,7 @@ def get_vocab(wes_fs):
         vocab = KeyedVectors.load_word2vec_format(wes_f, binary=False).index_to_key
         vocabs.append(vocab)
         print(wes_f, len(vocab))
-        
+    
     joint_vocab = vocabs[0]
     for vocab in vocabs:
         joint_vocab = np.intersect1d(joint_vocab, vocab).tolist()

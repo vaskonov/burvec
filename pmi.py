@@ -1,5 +1,16 @@
+
+# Local Mutual Information (akin to the widely used Log-Likelihood Ratio scheme) (Evert, 2005)
+
+# However, it is worth pointing out that the evaluated parameter subset encompasses settings (narrow context window, positive PMI, SVD reduction) that have been found to be most effective in the systematic explorations of the parameter space conducted by Bullinaria and Levy (2007; 2012).
+
+
+
 from composes.semantic_space.space import Space
 from composes.transformation.scaling.ppmi_weighting import PpmiWeighting
+from composes.transformation.scaling.epmi_weighting import EpmiWeighting
+from composes.transformation.scaling.plmi_weighting import PlmiWeighting
+from composes.transformation.scaling.plog_weighting import PlogWeighting
+
 from composes.transformation.dim_reduction.svd import Svd
 from composes.matrix.sparse_matrix import SparseMatrix
 from composes.similarity.cos import CosSimilarity
@@ -13,13 +24,19 @@ data='/tmp/data.pmi'
 rows='/tmp/rows.pmi'
 cols='/tmp/cols.pmi'
 
-def build_pairs(post_lemma, ng):
+def build_pairs(post_lemma, ng, min_count=10):
     print("build_pairs: "+str(ng))
     omit = ['BEG', 'END', 'UNK']
     word_context = []
     words = []
+    vocabs = []
 
-#     print('build_pairs: total articles', len(post_lemma))
+#  build vocabs
+
+    for idx, text in enumerate(post_lemma):
+        vocabs.extend(text.split(" "))
+    
+    vocabs_c = dict(Counter(vocabs))
 
     for idx, text in enumerate(post_lemma):
         
@@ -38,8 +55,13 @@ def build_pairs(post_lemma, ng):
                 if text[i] not in omit:
                     word_context.append((text[idx], text[i]))
 
-#     print('build_pairs: ng:', ng, ' num of pairs:', len(word_context))
-    return dict(Counter(word_context))
+    grams = dict(Counter(word_context))
+    print("before filtering", len(grams.keys()))
+    
+    filter_grams = { pair:idx for pair, idx in grams.items() if vocabs_c[pair[0]]>=min_count and vocabs_c[pair[1]]>=min_count}
+    print("before filtering", len(filter_grams.keys()))
+    
+    return filter_grams
 
 
 def convert(fin,fout):
@@ -73,18 +95,21 @@ def prepare_pmi(pmi):
             f.write(c+"\n")
 
             
-def pmi(dim=0):
+def pmi(method='PpmiWeighting', dim=0):
     print("pmi: "+str(dim))
     my_space = Space.build(data = data, rows = rows, cols = cols, format = "sm")
 #     Positive Point-wise Mutual Information
-    my_space = my_space.apply(PpmiWeighting())
+    print("apply", method)
+    my_space = my_space.apply(eval(method + "()"))
 
-    if dim!=0:
+    if dim != 0:
         my_space = my_space.apply(Svd(dim))
-
-
+    
+    print("exporting pmi...")
     my_space.export("/tmp/space", format='dm')
+    print("done")
     return True
+
 #from sklearn.decomposition import TruncatedSVD
 
 #def svd(space, dim):
