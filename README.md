@@ -7,15 +7,6 @@ Buryat Embeddings:
 |     | 2                                                                                                                                                                                                                                                                             | 5                                                                                                                                                                                                                                                                             | 10                                                                                                                                                                                                                                                                           |
 |-----|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 50  | 
-[CBOW](https://drive.google.com/file/d/1Q4rkxYSYKR9SWgMcuv5HJDYCaA7oPcKu/view?usp=sharing)
-[SG](https://drive.google.com/file/d/1HmX-UOQMwmkQkno8FxWWiZzlH8Pcnbyo/view?usp=sharing)
-[GloVe](https://drive.google.com/file/d/1VZ4jKjWSTRd5UAmO0z4kzPn6AdWWgzUS/view?usp=sharing)
-[SVD](https://drive.google.com/file/d/1l1VI0bf3o4MF1KNSHctYSL_8PA_uFO0y/view?usp=sharing)
-| 
-[CBOW](https://drive.google.com/file/d/1xelSd02x9YNELZWHSHgX1SNgfRe4LSE5/view?usp=sharing)
-[SG](https://drive.google.com/file/d/1MnrDX_RyOUryI_lF9kM17o3SujMx4ksa/view?usp=sharing)
-[GloVe](https://drive.google.com/file/d/1LwU-Pkha-L436IHBNZuxmKK1j4fv0KRs/view?usp=sharing)
-[SVD](https://drive.google.com/file/d/1s7mdkNA_dKpJm24RiuHoq7iLNFvS5z9k/view?usp=sharing)
-|
+[CBOW](https://drive.google.com/file/d/1Q4rkxYSYKR9SWgMcuv5HJDYCaA7oPcKu/view?usp=sharing)[SG](https://drive.google.com/file/d/1HmX-UOQMwmkQkno8FxWWiZzlH8Pcnbyo/view?usp=sharing)[GloVe](https://drive.google.com/file/d/1VZ4jKjWSTRd5UAmO0z4kzPn6AdWWgzUS/view?usp=sharing)[SVD](https://drive.google.com/file/d/1l1VI0bf3o4MF1KNSHctYSL_8PA_uFO0y/view?usp=sharing) | [CBOW](https://drive.google.com/file/d/1xelSd02x9YNELZWHSHgX1SNgfRe4LSE5/view?usp=sharing) [SG](https://drive.google.com/file/d/1MnrDX_RyOUryI_lF9kM17o3SujMx4ksa/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1LwU-Pkha-L436IHBNZuxmKK1j4fv0KRs/view?usp=sharing) [SVD](https://drive.google.com/file/d/1s7mdkNA_dKpJm24RiuHoq7iLNFvS5z9k/view?usp=sharing) | |
 ### Contact
 For any question, please contact vaskoncv@gmail.com
