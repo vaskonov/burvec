@@ -21,9 +21,19 @@ Erzya Language Embeddings:
 Komi Language Embeddings:
  |     | 2 | 5 | 10 |
  |-----|---|---|----|
- | 50  | [CBOW]() [SG]() [GloVe]() [SVD]() | [CBOW]() [SG]() [GloVe]() [SVD]() | [CBOW]() [SG]() [GloVe]() [SVD]() |
- | 100 | [CBOW]() [SG]() [GloVe]() [SVD]() | [CBOW]() [SG]() [GloVe]() [SVD]() | [CBOW]() [SG]() [GloVe]() [SVD]() |
- | 500 | [CBOW]() [SG]() [GloVe]() [SVD]() | [CBOW]() [SG]() [GloVe]() [SVD]() | [CBOW]() [SG]() [GloVe]() [SVD]() |
+ | 50  | [CBOW](https://drive.google.com/file/d/1wAMbF6bxre_WJ4dts7ahGuXbObbovWXk/view?usp=sharing) [SG](https://drive.google.com/file/d/1_4U8iB9kaB-KFrhBV3_a1cziSMo4e6qU/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1-g1-aZZcZjUR_3pVLydhvq6vIh2IwhWU/view?usp=sharing) [SVD](https://drive.google.com/file/d/1QnxadGbb6yyv0zP7wApfADsHdj2RmJq9/view?usp=sharing) | [CBOW](https://drive.google.com/file/d/15bP66inDSuHRqtdZV2d8Jiqr4GHR4mQA/view?usp=sharing) [SG](https://drive.google.com/file/d/1BGhgFJS8ldghFCpzrwDeFjXBBM9czbg4/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1LBj3okEfqyBv36XyhXKUIHu7zHlqmBsX/view?usp=sharing) [SVD](https://drive.google.com/file/d/1IqzNqqwO5-Xcby1Ut45_Yie6hMAJ6zuQ/view?usp=sharing) | [CBOW](https://drive.google.com/file/d/10hFzuYRtfl_K8av5X98r3SKElepvFX0q/view?usp=sharing) [SG](https://drive.google.com/file/d/1Ybp8DuTvlA9suTHw89ZBGOwY1UfeDwsh/view?usp=sharing) [GloVe](https://drive.google.com/file/d/18cxqDWOPC2-UAEeXnhkAe1apiO2zLcIW/view?usp=sharing) [SVD](https://drive.google.com/file/d/1ey3vmo4oi4rJbIUFTFreZzWv-hRIZpeH/view?usp=sharing) |
+ | 100 | [CBOW](https://drive.google.com/file/d/1-V7S8HdJ-eTWcqOs2thlBAigmowNL_bs/view?usp=sharing) [SG](https://drive.google.com/file/d/12tDAyGnNLSnD1yWt4J6oaI_ZB2H6KtAq/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1-rN--iKdQOeV-rIHZdEzSVQPMlY9POFy/view?usp=sharing) [SVD](https://drive.google.com/file/d/1ZHP8YSfYbU2zXU5WMNq38tln6JidT4Ea/view?usp=sharing) | [CBOW](https://drive.google.com/file/d/1UJ4BRJB4iccHgyDiAK-i365sgC9y4RC0/view?usp=sharing) [SG](https://drive.google.com/file/d/1ZfJHgkEzVeWiieSW3DsfVXRDRIBbZE2H/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1gFK-Hi9cJMPUckbfZgcqsnB6EaKwFSNb/view?usp=sharing) [SVD](https://drive.google.com/file/d/1R-kqV4MAyQYYj3aAXDmu3QVVJT_-qtny/view?usp=sharing) | [CBOW](https://drive.google.com/file/d/1-K9nIQN4wPvFtU-kyKIxLVsC16z-NlZh/view?usp=sharing) [SG](https://drive.google.com/file/d/1wbnLu7uB-5xLcL3W6nvIDuwMACEZIlV0/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1NcbJXudAPQamyztfyi4GdRSBc2E2maTl/view?usp=sharing) [SVD](https://drive.google.com/file/d/1xleOhMZeL9wlKlaQ9okUAuFo5_-VfPXH/view?usp=sharing) |
+ | 500 | [CBOW](https://drive.google.com/file/d/1Ear6VN5_5B7PzhOk0UEldvpxoyA2J_Al/view?usp=sharing) [SG](https://drive.google.com/file/d/1fZor9m1tWhHd8p8G6RXpPgK40jUtePE1/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1Ckh7tT4N5pVP8VVKs-AiFqfGT44Ljf3c/view?usp=sharing) [SVD](https://drive.google.com/file/d/1HHGw-vuCgXUAUTbBIeoPpVEL9I7JwUoZ/view?usp=sharing) | [CBOW](https://drive.google.com/file/d/1bE-awaf2JJQ5SQD6mmifom410YzDQoqo/view?usp=sharing) [SG](https://drive.google.com/file/d/1c9ISYxfvDeixLszOByv_d2yUcAFSQUQo/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1hDIhmJX45GOf7tooiKEunWSnz0C9wZaJ/view?usp=sharing) [SVD](https://drive.google.com/file/d/13awQNbCcVQT5BeEb4BeFkkLnf2kRiZG-/view?usp=sharing) | [CBOW](https://drive.google.com/file/d/1PY5_gKC7d41YuG293EZUDxVlgaUCDl7X/view?usp=sharing) [SG](https://drive.google.com/file/d/1gVen99lqlQvDd41kEErGgvVYYOGy7Joe/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1-nA-tTumZ_fZlx-FhY5y-LhatXXoxVWI/view?usp=sharing) [SVD](https://drive.google.com/file/d/1H9gpznAugLWSjn8dXYbXElVTuleYnecQ/view?usp=sharing) |
 
 ### Contact
 For any question, please contact vaskoncv@gmail.com
+
+### Cite
+@inproceedings{konovalov2018learning,
+  title={Learning word embeddings for low resource languages: the case of Buryat},
+  author={Konovalov, VP and Tumunbayarova, ZB},
+  booktitle={Komp'juternaja Lingvistika i Intellektual'nye Tehnologii},
+  pages={331--341},
+  year={2018}
+}
+
