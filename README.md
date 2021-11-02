@@ -28,18 +28,13 @@ Komi Language Embeddings:
 
 ### Cite
 
+```yaml
 @inproceedings{konovalov2018learning,
-
   title={Learning word embeddings for low resource languages: the case of Buryat},
-  
   author={Konovalov, VP and Tumunbayarova, ZB},
-  
   booktitle={Komp'juternaja Lingvistika i Intellektual'nye Tehnologii},
-  
   pages={331--341},
-  
   year={2018}
-  
 }
 
 
