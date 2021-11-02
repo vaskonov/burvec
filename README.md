@@ -26,6 +26,10 @@ Komi Language Embeddings:
  | 500 | [CBOW](https://drive.google.com/file/d/1Ear6VN5_5B7PzhOk0UEldvpxoyA2J_Al/view?usp=sharing) [SG](https://drive.google.com/file/d/1fZor9m1tWhHd8p8G6RXpPgK40jUtePE1/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1Ckh7tT4N5pVP8VVKs-AiFqfGT44Ljf3c/view?usp=sharing) [SVD](https://drive.google.com/file/d/1HHGw-vuCgXUAUTbBIeoPpVEL9I7JwUoZ/view?usp=sharing) | [CBOW](https://drive.google.com/file/d/1bE-awaf2JJQ5SQD6mmifom410YzDQoqo/view?usp=sharing) [SG](https://drive.google.com/file/d/1c9ISYxfvDeixLszOByv_d2yUcAFSQUQo/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1hDIhmJX45GOf7tooiKEunWSnz0C9wZaJ/view?usp=sharing) [SVD](https://drive.google.com/file/d/13awQNbCcVQT5BeEb4BeFkkLnf2kRiZG-/view?usp=sharing) | [CBOW](https://drive.google.com/file/d/1PY5_gKC7d41YuG293EZUDxVlgaUCDl7X/view?usp=sharing) [SG](https://drive.google.com/file/d/1gVen99lqlQvDd41kEErGgvVYYOGy7Joe/view?usp=sharing) [GloVe](https://drive.google.com/file/d/1-nA-tTumZ_fZlx-FhY5y-LhatXXoxVWI/view?usp=sharing) [SVD](https://drive.google.com/file/d/1H9gpznAugLWSjn8dXYbXElVTuleYnecQ/view?usp=sharing) |
 
 
+### Contact
+For any question, please contact vaskoncv@gmail.com
+
+
 ### Cite
 
 ```yaml
@@ -36,7 +40,3 @@ Komi Language Embeddings:
   pages={331--341},
   year={2018}
 }
-
-
-### Contact
-For any question, please contact vaskoncv@gmail.com
