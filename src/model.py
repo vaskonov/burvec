@@ -2,8 +2,11 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from sklearn.metrics import f1_score
+from sklearn.metrics import accuracy_score
+
 
 class BiLSTMPOSTagger(nn.Module):
+
     def __init__(self, 
                  input_dim, 
                  embedding_dim, 
@@ -15,9 +18,9 @@ class BiLSTMPOSTagger(nn.Module):
                  pad_idx):
         
         super().__init__()
-        torch.manual_seed(1234)
         
         self.embedding = nn.Embedding(input_dim, embedding_dim, padding_idx = pad_idx)
+        self.embedding.weight.requires_grad = False
         
         self.lstm = nn.LSTM(embedding_dim, 
                             hidden_dim, 
@@ -28,37 +31,21 @@ class BiLSTMPOSTagger(nn.Module):
         self.fc = nn.Linear(hidden_dim * 2 if bidirectional else hidden_dim, output_dim)
         
         self.dropout = nn.Dropout(dropout)
+
         
     def forward(self, text):
 
-        #text = [sent len, batch size]
-        
-        #pass text through embedding layer
         embedded = self.dropout(self.embedding(text))
-        
-        #embedded = [sent len, batch size, emb dim]
-        
-        #pass embeddings into LSTM
         outputs, (hidden, cell) = self.lstm(embedded)
-        
-        #outputs holds the backward and forward hidden states in the final layer
-        #hidden and cell are the backward and forward hidden and cell states at the final time-step
-        
-        #output = [sent len, batch size, hid dim * n directions]
-        #hidden/cell = [n layers * n directions, batch size, hid dim]
-        
-        #we use our outputs to make a prediction of what the tag should be
         predictions = self.fc(self.dropout(outputs))
-        
-        #predictions = [sent len, batch size, output dim]
         
         return predictions
 
     
-def tag_percentage(tag_counts):
-    total_count = sum([count for tag, count in tag_counts])
-    tag_counts_percentages = [(tag, count, count/total_count) for tag, count in tag_counts]
-    return tag_counts_percentages
+# def tag_percentage(tag_counts):
+#     total_count = sum([count for tag, count in tag_counts])
+#     tag_counts_percentages = [(tag, count, count/total_count) for tag, count in tag_counts]
+#     return tag_counts_percentages
 
 
 def init_weights(m):
@@ -95,31 +82,18 @@ def train(model, iterator, optimizer, criterion, tag_pad_idx):
         
         optimizer.zero_grad()
         
-        #text = [sent len, batch size]
-        
         predictions = model(text)
-        
-        #predictions = [sent len, batch size, output dim]
-        #tags = [sent len, batch size]
         
         predictions = predictions.view(-1, predictions.shape[-1])
         tags = tags.view(-1)
         
-        #predictions = [sent len * batch size, output dim]
-        #tags = [sent len * batch size]
-        
         loss = criterion(predictions, tags)
-                
-#         acc = categorical_accuracy(predictions, tags, tag_pad_idx)
-        
         loss.backward()
-        
         optimizer.step()
         
         epoch_loss += loss.item()
-#         epoch_acc += acc.item()
         
-    return epoch_loss / len(iterator)#, epoch_acc / len(iterator)
+    return epoch_loss / len(iterator)
 
 
 def evaluate(model, iterator, criterion, tag_pad_idx):
@@ -151,12 +125,9 @@ def evaluate(model, iterator, criterion, tag_pad_idx):
             preds.extend([a[0] for a in max_preds.tolist()])
             golds.extend(tags.tolist())
             
-#             acc = categorical_accuracy(predictions, tags, tag_pad_idx)
-
             epoch_loss += loss.item()
-#             epoch_acc += acc.item()
     
-#     print(f1_score(golds, preds, average='macro'))                          
+#     acc = accuracy_score(golds, preds)
     f1 = f1_score(golds, preds, average='macro')
     return epoch_loss / len(iterator), f1# epoch_acc / len(iterator)
 

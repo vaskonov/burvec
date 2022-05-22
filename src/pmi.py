@@ -1,10 +1,3 @@
-
-# Local Mutual Information (akin to the widely used Log-Likelihood Ratio scheme) (Evert, 2005)
-
-# However, it is worth pointing out that the evaluated parameter subset encompasses settings (narrow context window, positive PMI, SVD reduction) that have been found to be most effective in the systematic explorations of the parameter space conducted by Bullinaria and Levy (2007; 2012).
-
-
-
 from composes.semantic_space.space import Space
 from composes.transformation.scaling.ppmi_weighting import PpmiWeighting
 from composes.transformation.scaling.epmi_weighting import EpmiWeighting
@@ -30,8 +23,6 @@ def build_pairs(post_lemma, ng, min_count=10):
     word_context = []
     words = []
     vocabs = []
-
-#  build vocabs
 
     for idx, text in enumerate(post_lemma):
         vocabs.extend(text.split(" "))
@@ -124,3 +115,7 @@ def pmi(method='PpmiWeighting', dim=0):
 #pdb.set_trace()
 #get_sim(key, value, CosSimilarity())
 #space.id2row
+
+# # assert(build_pairs(['I like apples and alcohol'],2), )
+# # print(build_pairs(['I like apples and alcohol is this OK'],3))
+# assert(build_pairs(['I like apples and alcohol'],1), [('I', 'like'), ('like', 'I'), ('like', 'apples'), ('apples', 'like'), ('apples', 'and'), ('and', 'apples'), ('and', 'alcohol'), ('alcohol', 'and')])
