@@ -39,6 +39,10 @@ class BiLSTMPOSTagger(nn.Module):
         outputs, (hidden, cell) = self.lstm(embedded)
         predictions = self.fc(self.dropout(outputs))
         
+#         embedded = self.embedding(text)
+#         outputs, (hidden, cell) = self.lstm(embedded)
+#         predictions = self.fc(outputs)
+        
         return predictions
 
     
@@ -55,7 +59,7 @@ def init_weights(m):
         
         
 def count_parameters(model):
-    return sum(p.numel() for p in model.parameters() if p.requires_grad)
+    return (sum(p.numel() for p in model.parameters() if p.requires_grad), sum(p.numel() for p in model.parameters()))
 
 
 # def categorical_accuracy(preds, y, tag_pad_idx):
@@ -127,8 +131,9 @@ def evaluate(model, iterator, criterion, tag_pad_idx):
             
             epoch_loss += loss.item()
     
-#     acc = accuracy_score(golds, preds)
-    f1 = f1_score(golds, preds, average='macro')
+
+    f1 = f1_score(golds, preds, average='weighted')
+#     f1 = f1_score(golds, preds, average='macro')
     return epoch_loss / len(iterator), f1# epoch_acc / len(iterator)
 
 
