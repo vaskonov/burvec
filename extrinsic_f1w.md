@@ -1,3 +1,5 @@
+Word embeddings extrinsic evaluation on POS
+
 **Epochs**: 10
 
 **Metric**: F1-weighted
