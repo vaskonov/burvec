@@ -29,7 +29,6 @@ Komi Language Embeddings:
 Files for evaluation: [bxr](https://drive.google.com/file/d/1ES19CUGJSeQdpsznvbV9gqY7_4xoGu_9/view?usp=sharing) [myv](https://drive.google.com/file/d/1Q59-EMajNCKWaySMbDzXMm8ud7kT_aO9/view?usp=sharing) [kv](https://drive.google.com/file/d/1DKK1l4mRvEio3c-b4DKNHyxhCUaVgv1H/view?usp=sharing)
 
 ### Contact
-For any question, please contact vaskoncv@gmail.com
 
 
 ### Cite
